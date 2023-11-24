@@ -21,12 +21,12 @@ body {
 /* Header */
 header {
     height: 100vh;
+    width: 100vw;
     padding: 2vh 5vw;
     background-image: url("../assets/profil-1.png");
     background-position: 85%;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100vw;
 }
 
 header nav {
@@ -48,7 +48,7 @@ header nav ul {
 
 header nav ul li {
     list-style: none;
-    margin: 15px 1vw;
+    margin: 17px 1vw;
 }
 
 header nav ul li a {
@@ -56,6 +56,7 @@ header nav ul li a {
     color: #fbfbfb;
     transition: all ease 1s;
     font-size: 1.2rem;
+    text-shadow: 0px 3px 3px #fec86a
 }
 
 header nav ul li a:hover, .active {
@@ -97,13 +98,13 @@ header nav .search i {
 
 .landing .intro {
     margin-top: 20%;
+    margin-left: 10vw;
 }
 
 .landing .intro h3 {
     color: #fec86a;
     font-weight: 400;
     font-size: 2vmax;
-    margin-left: 10vw;
 }
 
 .landing .intro h3 span {
@@ -120,7 +121,6 @@ header nav .search i {
     height: 6vh;
     width: 10vmax;
     margin-top: 2.5vh;
-    margin-left: 10vw;
     background-color: transparent;
     border: 2px solid #fec86a;
     border-radius: 8px;
@@ -157,10 +157,7 @@ header nav .search i {
   
 /* About Section */
 .about {
-    height: 40vh;
-    width: 100vw;
-    padding: 100px;
-    overflow: auto;
+    padding: 40px 5vw 40px 5vw;
 }
 
 .about h1 {
@@ -264,7 +261,7 @@ header nav .search i {
     --percentage: var(--value);
     --primary: #369;
     --secondary: #adf;
-    --size: 10vw;
+    --size: 9vw;
     animation: progress 2s 0.5s forwards;
     width: var(--size);
     aspect-ratio: 1;
@@ -304,6 +301,9 @@ header nav .search i {
     font-size: 1.5rem;
     font-weight: 400;
     color: #fbfbfb;
+    text-align: center;
+    padding: 0 5px;
+    user-select: none;
 }
 
 
@@ -328,24 +328,122 @@ header nav .search i {
 
 .portfolio .cards {
     display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
 .portfolio-card {
-    padding-block: 50px;
-    background-color: #fbfbfb;
-    height: 200px;
-    width: 200px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 75vw;
+    max-width: 1000px;
+    padding: 50px 30px 50px 20px;
+    background-color: #fbfbfb;
+    border-radius: 24px;
 }
 
 .portfolio-card img {
-    width: 150px;
-    height: 150px;
+    max-width: 300px;
+    width: 28vw;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 0 20px 40px rgb(0, 0, 0, .8);
 }
 
+.caption-portfolio h2 {
+    margin-bottom: 20px;
+    font-size: 1.7em;
+}
+
+.caption-portfolio p {
+    margin-bottom: 30px;
+}
+
+.caption-portfolio button {
+    border: 0;
+    cursor: pointer;
+    background-color: #369;
+    font-family: inherit;
+    padding: 16px 26px;
+    font-size: 16px;
+    border-radius: 40px;
+    display: flex;
+    margin: auto;
+}
+
+/* Experience Section */
+.experience {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 15vh;
+}
+  
+.experience h1 {
+    position: absolute;
+    color: #fbfbfb;
+    font-size: 3.5rem;
+    font-family: "Libre Baskerville", serif;
+    margin-top: -40px;
+    margin-left: 5vw;
+}
+  
+.lighter-div {
+    background-color: #3d3e42;
+    width: 100vw;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+  
+.lighter-div .exp {
+    width: 50vw;
+    position: relative;
+    margin-left: 10vw;
+ }
+  
+.exp h2 {
+    color: #fbfbfb;
+    font-size: 32px;
+    font-weight: 400;
+}
+  
+.exp h2::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #fec86a;
+    position: absolute;
+    transform: translate(-150%, 40%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px #fec86a;
+}
+  
+.exp-desc::before {
+    content: "";
+    height: 190px;
+    width: 2.5px;
+    background-color: #fbfbfb;
+    position: absolute;
+    transform: translate(-875%, 0);
+}
+
+.exp-desc h3 {
+    color: #fbfbfb;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+  
+.exp-desc p {
+    color: #fbfbfb;
+    font-size: 16;
+    font-weight: 400;
+}
 
 
 /* Footer Section */
@@ -359,7 +457,7 @@ header nav .search i {
 }
   
 .footer h1 {
-    font-size: 56px;
+    font-size: 3.5rem;
     color: #fbfbfb;
     font-family: "Libre Baskerville", serif;
     font-weight: 700;
@@ -377,9 +475,104 @@ header nav .search i {
     display: flex;
     gap: 10px;
     margin-top: 7.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
-.contact-card i {
-    font-size: 18px;
+.contact-card i, p {
+    font-size: 1.2rem;
 }
 
+@media (max-width:700px) {
+
+    header {
+        height: 100vh;
+        background-position-y: bottom;
+    }
+
+    header nav .search {
+        display: none;
+    }
+
+    .landing .intro {
+        margin-top: 20vh;
+        margin-left: 0;
+    }
+
+    .intro button {
+        width: 120px;
+    }
+
+    .social-media {
+        margin-top: 7vh;
+    }
+
+    .about {
+        margin-top: 2vh;
+    }
+
+    .about .description .line {
+        width: 11.3rem;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    
+    .about .description {
+        flex-direction: column;
+    }
+    
+    .about .description p {
+        color: #fbfbfb;
+        font-size: 1em;
+    }
+
+    .skills {
+        padding: 0 5px;
+    }
+
+    .skills-card h2 {
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .portfolio {
+        padding: 0px 20px;
+    }
+
+    .portfolio-card {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .portfolio-card img {
+        margin: -80px 0 30px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .experience h1 {
+        margin-left: 5vw;
+    }
+
+    .lighter-div {
+        padding-left: 5vw;
+    }
+
+    .lighter-div .exp {
+        width: 70vw;
+     }
+
+     .contact-card i {
+        font-size: 25px;
+     }
+
+     .contact-card p {
+        display: none;
+     }
+
+}
