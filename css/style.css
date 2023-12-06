@@ -22,8 +22,8 @@ body {
 header {
     height: 100vh;
     width: 100vw;
-    padding: 2vh 5vw;
-    background-image: url("../assets/profil-1.png");
+    padding-top: .01vh;
+    background-image: url("../assets/profil-1.png"), linear-gradient(to bottom, rgb(28, 28, 28), transparent);
     background-position: 85%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,7 +33,13 @@ header nav {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 90%;
+    width: 100vw;
+    padding: 2vh 5vw;
+    z-index: 2;
+}
+
+nav.sticky {
+    background: linear-gradient(to bottom, rgb(28, 28, 28), transparent);
 }
 
 header nav img {
@@ -48,7 +54,7 @@ header nav ul {
 
 header nav ul li {
     list-style: none;
-    margin: 17px 1vw;
+    margin: auto 1vw;
 }
 
 header nav ul li a {
@@ -56,44 +62,62 @@ header nav ul li a {
     color: #fbfbfb;
     transition: all ease 1s;
     font-size: 1.2rem;
-    text-shadow: 0px 3px 3px #fec86a
 }
 
-header nav ul li a:hover, .active {
+header nav ul li a:hover {
     color: #98999a;
 }
 
-header nav .search {
-    height: 5vh;
-    width: 10vw;
+header nav ul li.active {
+    border-bottom: #fec86a solid 3px;
+}
+
+header nav .bottom {
+    height: 45px;
+    width: 45px;
     background-color: #3d3e42;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
+    margin: auto 0;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-header nav .search input {
-    border: none;
-    background-color: transparent;
-    width: 80%;
+header nav .bottom i {
     color: #fbfbfb;
-    outline: none;
+    font-size: 25px;
 }
 
-header nav .search input:focus {
-    border: none;
-    outline: none;
+header nav .top {
+    position: absolute;
+    right: 5vw;
+    top: 26px;
+    height: 45px;
+    width: 45px;
+    background-color: #fec86a;
+    display: none;
+    margin: auto 0;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-header nav .search input::placeholder {
-    color: #98999a;
-    font-size: 16px;
+header nav .top i {
+    color: #34353b;
+    font-size: 25px;
 }
 
-header nav .search i {
-    color: #98999a;
+header nav .top a,.bottom a {
+    text-decoration: none;
+}
+
+header nav .toggle {
+    margin: auto 0;
+    display: none;
+}
+
+header nav .toggle i {
+    font-size: 4vh;
+    color: #fbfbfb;
 }
 
 .landing .intro {
@@ -115,22 +139,22 @@ header nav .search i {
 
 .landing .intro h3 p{
     color: #fbfbfb;
+    margin-bottom: 25px;
 }
 
-.intro button {
-    height: 6vh;
-    width: 10vmax;
-    margin-top: 2.5vh;
+.intro a {
+    padding: 15px 30px;
+    text-decoration: none;
     background-color: transparent;
     border: 2px solid #fec86a;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #fec86a;
     font-size: 1rem;
     font-weight: bold;
     transition: all ease 0.5s;
 }
 
-.intro button:hover {
+.intro a:hover {
     background-color: #fec86a;
     color: #34353b;
     cursor: pointer;
@@ -141,6 +165,8 @@ header nav .search i {
     flex-direction: column;
     gap: 10px;
     align-items: end;
+    margin-right: 5vw;
+    margin-top: -2%;
 }
 
 .social-media .line {
@@ -149,7 +175,12 @@ header nav .search i {
     height: 15vh;
     width: 2.5px;
 }
-  
+
+.social-media a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .social-media i {
     color: #fbfbfb;
     font-size: 36px;
@@ -194,7 +225,7 @@ header nav .search i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: 2vh;
 }
   
 .skills h1 {
@@ -208,8 +239,8 @@ header nav .search i {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
     gap: 25px;
+    margin: 20px 5px 40px 5px;
 }
   
 .skills-card {
@@ -240,6 +271,7 @@ header nav .search i {
     width: 20vw;
     padding: 24px;
     opacity: 0;
+    z-index: 1;
 }
 
 .skills-card .overlay:hover {
@@ -314,7 +346,7 @@ header nav .search i {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 2vh;
     padding: 0px 100px;
 }
 
@@ -323,13 +355,14 @@ header nav .search i {
     font-weight: 700;
     color: #fbfbfb;
     font-family: "Libre Baskerville", serif;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .portfolio .cards {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
 .portfolio-card {
@@ -362,16 +395,34 @@ header nav .search i {
     margin-bottom: 30px;
 }
 
-.caption-portfolio button {
-    border: 0;
-    cursor: pointer;
-    background-color: #369;
-    font-family: inherit;
-    padding: 16px 26px;
-    font-size: 16px;
-    border-radius: 40px;
-    display: flex;
+.caption-portfolio a {
+  font-size: 16px;
+  width: 170px;
+  text-decoration: none;
+  color: #34353b;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 10px 15px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  display: flex;
+}
+
+.caption-portfolio a p {
     margin: auto;
+}
+
+.caption-portfolio a:hover {
+  background-color: #34353b;
+  color: #fbfbfb;
+}
+
+.caption-portfolio a i{
+    font-size: 30px;
 }
 
 /* Experience Section */
@@ -379,7 +430,7 @@ header nav .search i {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin-top: 15vh;
+    margin-top: 4vh;
 }
   
 .experience h1 {
@@ -425,11 +476,11 @@ header nav .search i {
   
 .exp-desc::before {
     content: "";
-    height: 190px;
+    height: 17vh;
     width: 2.5px;
     background-color: #fbfbfb;
     position: absolute;
-    transform: translate(-875%, 0);
+    transform: translate(-850%, 2%);
 }
 
 .exp-desc h3 {
@@ -438,18 +489,42 @@ header nav .search i {
     font-weight: 400;
     margin: 10px 0;
 }
+
+.exp-desc span {
+    color: #fec86a;
+}
   
 .exp-desc p {
     color: #fbfbfb;
-    font-size: 16;
-    font-weight: 400;
+    font-weight: 300;
+}
+
+.exp-desc ul li {
+    list-style: none;
+    position: relative;
+    padding: 3px 0 2px 25px;
+    color: #fbfbfb;
+    font-weight: 300;
+}
+      
+.exp-desc ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 5px;
+    width: 5px;
+    border: 1px solid #fec86a;
+    border-width: 3px 3px 0 0;
+    transform: rotate(45deg);
+    font-weight: bold;
 }
 
 
 /* Footer Section */
 .footer {
     width: 100vw;
-    padding: 100px;
+    padding: 100px 100px 10px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -461,6 +536,7 @@ header nav .search i {
     color: #fbfbfb;
     font-family: "Libre Baskerville", serif;
     font-weight: 700;
+    margin-bottom: 5vh;
 }
   
 .contact {
@@ -469,21 +545,44 @@ header nav .search i {
 }
   
 .contact-card {
+    border: 0;
     background-color: #fec86a;
     padding: 20px;
     border-radius: 8px;
     display: flex;
     gap: 10px;
-    margin-top: 7.5vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
-    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
 }
 
-.contact-card i, p {
-    font-size: 1.2rem;
+.contact-card i {
+    font-size: 2rem;
+}
+
+.contact-card p {
+    font-size: 1.3rem;
+}
+
+.credit {
+    display: flex;
+    margin-top: 5vh;
+    flex-direction: row;
+}
+
+.credit img{
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.credit p {
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    color: #808080;
 }
 
 @media (max-width:700px) {
@@ -492,22 +591,59 @@ header nav .search i {
         height: 100vh;
         background-position-y: bottom;
     }
+    
+    header nav ul {
+        flex-direction: column;
+        position: fixed;
+        margin-top: 50px;
+        right: 6vw;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        max-height: 0;
+        gap: 20px;
+        overflow: hidden;
+        transition: ease-in-out .5s;
+    }
+
+    header nav ul li{
+        border-bottom: solid 1px #98999a;
+    }
+
+    header nav ul li a {
+        font-weight: bold;
+    }
+
+    header nav ul.open {
+        padding: 20px 100px;
+        max-height: 100%;
+    }
 
     header nav .search {
         display: none;
     }
 
-    .landing .intro {
-        margin-top: 20vh;
-        margin-left: 0;
+    header nav .toggle {
+        display: block;
+        cursor: pointer;
     }
 
-    .intro button {
-        width: 120px;
+    header nav .bottom {
+        display: none;
+    }
+
+    header nav .top {
+        top: 88vh;
+        right: 8vw;
+    }
+
+    .landing .intro {
+        margin-top: 20vh;
+        margin-left: 10vw;
     }
 
     .social-media {
-        margin-top: 7vh;
+        margin-top: 15vh;
     }
 
     .about {
@@ -531,6 +667,7 @@ header nav .search i {
 
     .skills {
         padding: 0 5px;
+        margin-top: 2vh;
     }
 
     .skills-card h2 {
@@ -540,6 +677,7 @@ header nav .search i {
 
     .portfolio {
         padding: 0px 20px;
+        margin-top: 2vh;
     }
 
     .portfolio-card {
@@ -551,12 +689,20 @@ header nav .search i {
     
     .portfolio-card img {
         margin: -80px 0 30px;
-        max-width: 400px;
+        max-width: 450px;
         width: 100%;
     }
 
+    .caption-portfolio a {
+        margin: auto;
+      }
+
+    .experience {
+        align-items: center;
+    }
+
     .experience h1 {
-        margin-left: 5vw;
+        margin-left: 0;
     }
 
     .lighter-div {
@@ -567,9 +713,9 @@ header nav .search i {
         width: 70vw;
      }
 
-     .contact-card i {
-        font-size: 25px;
-     }
+     .footer h1 {
+        text-align: center;
+    }
 
      .contact-card p {
         display: none;

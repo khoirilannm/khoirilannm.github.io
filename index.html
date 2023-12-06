@@ -5,180 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/ir-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Portfolio Website</title>
+    <title>ir's Portfolio</title>
 </head>
 <body>
 
     <header>
         <nav>
-            <img src="assets/ir-logo.png" alt="">
+            <a href="#top" id="logo"><img src="assets/ir-logo.png" alt=""></a>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
-            <div class="search">
-                <input type="text" placeholder="Search">
-                <i class="search-line"></i>
+            <div class="bottom">
+                <a href="#footer"><i class="ri-arrow-down-double-line"></i></a>
+            </div>
+            <div class="top">
+                <a href="#top"><i class="ri-arrow-up-double-line"></i></a>
+            </div>
+            <div class="toggle">
+                <i class="ri-menu-line"></i>
             </div>
         </nav>
         <div class="landing">
             <div class="intro">
                 <h3>Hello World! I'm<br><Span>Muhammad Misbah Khoiril Anam</Span>
-                <br><p>Fresh Graduated Informatics</p></h3>
-                <button>Contact Me</button>
+                <br><p>Fresh Graduated Computer Science</p></h3>
+                <a href="#footer">Contact Me</a>
             </div>
             <div class="social-media">
                 <div class="line"></div>
-                <i class="ri-mail-line"></i>
-                <i class="ri-instagram-line"></i>
-                <i class="ri-whatsapp-line"></i>
+                <a href="mailto:khoirilannm@gmail.com" target="_blank">
+                    <i class="ri-mail-line"></i></a>
+                <a href="https://wa.me/+6289671917744" target="_blank">
+                    <i class="ri-whatsapp-line"></i></a>
+                <a href="https://maps.app.goo.gl/9HJPzspe4coTqx3f9" target="_blank">
+                    <i class="ri-map-pin-3-line"></i></a>
             </div>
         </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <h1>About</h1>
         <div class="description">
             <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque doloremque nemo ad beatae eum fuga, vel molestiae natus hic enim esse? Exercitationem repellendus,
-                <span>cum eligendi quisquam temporibus libero,</span> odio aliquam unde voluptatum voluptates error laboriosam maiores eius cumque ipsum
-                molestiae atque eveniet eos? culpa magni a ratione quae reiciendis?</p>
+            <p>Seorang fresh graduate lulusan S1 Informatika dari Universitas Teknologi Yogyakarta dengan hasil IPK 3,41, memiliki kemampuan dalam mengoperasikan komputer dan 
+                beberapa perangkat lunak seperti <span>Microsoft Office, Google Spreadsheet, dan Looker Studio,</span> juga menguasai beberapa bahasa pemrograman seperti SQL, Python, dan Java.
+                Saya adalah seorang laki-laki berusia 23 tahun yang memiliki semangat tinggi dalam mempelajari hal-hal baru terutama dalam hal menganalisa data untuk 
+                menemukan solusi terhadap masalah berdasarkan data yang ada.</p>
         </div>
     </section>
 
     <section class="skills">
-        <h1>My Skills</h1>
+        <h1>Skills</h1>
         <div class="cards">
             <div class="skills-card">
                 <img src="assets/html-logo.svg" alt="">
                 <h2>HTML</h2>
                 <div class="overlay">
-                    <div class="progressbar" style="--value: 90"></div>
+                    <div class="progressbar" style="--value: 80"></div>
                 </div>
             </div>
             <div class="skills-card">
                 <img src="assets/css-logo.svg" alt="">
                 <h2>CSS</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 70"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/php-logo.svg" alt="">
                 <h2>PHP</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 40"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/python-logo.svg" alt="">
                 <h2>Python</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 50"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/java-logo.svg" alt="">
-                <h2>Java</h2>
+                <h2>Java</h2><div class="overlay">
+                    <div class="progressbar" style="--value: 50"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/streamlit-logo.svg" alt="">
                 <h2>Streamlit</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 60"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <img src="assets/netbeans-logo.png" alt="">
+                <h2>Netbeans IDE</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 80"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/excel-logo.svg" alt="">
                 <h2>Microsoft Excel</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 80"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/word-logo.svg" alt="">
                 <h2>Microsoft Word</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 80"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/ppt-logo.svg" alt="">
                 <h2>Microsoft Powerpoint</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 80"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/premiere-logo.svg" alt="">
                 <h2>Adobe Premiere</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 30"></div>
+                </div>
             </div>
             <div class="skills-card">
                 <img src="assets/ps-logo.svg" alt="">
                 <h2>Adobe Photoshop</h2>
+                <div class="overlay">
+                    <div class="progressbar" style="--value: 40"></div>
+                </div>
             </div>  
         </div>
     </section>
 
-    <section class="portfolio">
-        <h1>Portfolio</h1>
+    <section class="portfolio" id="portfolio">
+        <h1>Portfolios</h1>
         <div class="cards">
             <div class="portfolio-card">
-                <img src="assets/ir-logo.png" alt="">
+                <img src="assets/Python.jpg" alt="">
                 <div class="caption-portfolio">
                     <h2>Sistem Pendukung Keputusan Seleksi Karyawan Baru</h2>
                     <p>Suatu sistem untuk membantu penyeleksian karyawan baru menggunakan algoritma
                         Support Vector Machine dan metode SPK Simple Additive Weighting,
                         dengan menggunakan bahasa pemrograman Python dan framework Streamlit.
                     </p>
-                    <button>Show the...</button>
+                    <a href="https://github.com/khoirilannm/SPK-Penerimaan-Karyawan/tree/main" target="_blank"><i class="ri-github-fill"></i><p> Show More</p></a>
                 </div>
             </div>
             <div class="portfolio-card">
-                <img src="assets/ir-logo.png" alt="">
+                <img src="assets/truk.jpg" alt="">
                 <div class="caption-portfolio">
-                    <h2>Sistem Pendukung Keputusan Seleksi Karyawan Baru</h2>
-                    <p>Suatu sistem untuk membantu penyeleksian karyawan baru menggunakan algoritma
-                        Support Vector Machine dan metode SPK Simple Additive Weighting,
-                        dengan menggunakan bahasa pemrograman Python dan framework Streamlit.
-                    </p>
-                    <button>Show the...</button>
+                    <h2>Sistem Informasi Monitoring Unit Truk</h2>
+                    <p>Sistem informasi yang digunakan untuk membantu memonitoring unit truk perusahaan, sistem ini dibuat menggunakan Netbeans IDE dengan bahasa pemrograman Java.</p>
+                    <a href="https://github.com/khoirilannm/Sistem-Monitoring/tree/main" target="_blank"><i class="ri-github-fill"></i><p> Show More</p></a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="experience">
-        <h1>Experience</h1>
+        <h1>Experiences</h1>
         <div class="lighter-div">
             <div class="exp">
-                <h2>Senior Python Developer</h2>
+                <h2>Internship Staff Organization Development</h2>
                 <div class="exp-desc">
-                    <h3>Scottech, Toledo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, repellat! Mollitia nostrum,
-                        dolor repellat deleniti officiis voluptatem quas labore cupiditate iure ullam doloribus aliquam
-                        voluptates. Ratione earum reprehenderit iure, esse assumenda minima vero delectus consequuntur.
-                        Laborum eligendi nisi, doloremque, ab sint id enim in vel molestias, nihil vero suscipit a?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, repellat! Mollitia nostrum,
-                        dolor repellat deleniti officiis voluptatem quas labore cupiditate iure ullam doloribus aliquam
-                        voluptates. Ratione earum reprehenderit iure, esse assumenda minima vero delectus consequuntur.
-                        Laborum eligendi nisi, doloremque, ab sint id enim in vel molestias, nihil vero suscipit a?</p>
+                    <h3>PT Sukanda Djaya <span>April 2022 - Mei 2022</span></h3>
+                    <p>Tanggung Jawab:</p>
+                    <ul>
+                        <li>Memeriksa sekaligus mengoreksi data karyawan perusahaan jika ditemukan kesalahan pada data tersebut menggunakan aplikasi HRIS.</li>
+                        <li>Menyalin data karyawan perusahaan yang dibutuhkan dalam bentuk hard copy.</li>
+                    </ul>
                 </div>
             </div>
             <div class="exp">
-                <h2>Senior Python Developer</h2>
+                <h2>Internship Staff Accounting</h2>
                 <div class="exp-desc">
-                    <h3>Scottech, Toledo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, repellat! Mollitia nostrum,
-                        dolor repellat deleniti officiis voluptatem quas labore cupiditate iure ullam doloribus aliquam
-                        voluptates. Ratione earum reprehenderit iure, esse assumenda minima vero delectus consequuntur.
-                        Laborum eligendi nisi, doloremque, ab sint id enim in vel molestias, nihil vero suscipit a?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, repellat! Mollitia nostrum,
-                        dolor repellat deleniti officiis voluptatem quas labore cupiditate iure ullam doloribus aliquam
-                        voluptates. Ratione earum reprehenderit iure, esse assumenda minima vero delectus consequuntur.
-                        Laborum eligendi nisi, doloremque, ab sint id enim in vel molestias, nihil vero suscipit a?</p>
+                    <h3>PT Bank Mandiri (Persero) Tbk. <span>Januari 2018 - Maret 2018</span></h3>
+                    <p>Tanggung Jawab:</p>
+                    <ul>
+                        <li>Mencatat siklus keluar masuk pendanaan petty cash perusahaan.</li>
+                        <li>Menyalin dokumen untuk memudahkan keperluan administrasi.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <h1>Contact Me</h1>
         <div class="contact">
-            <div class="contact-card">
+            <a href="mailto:khoirilannm@gmail.com" target="_blank" class="contact-card">
                 <i class="ri-mail-line"></i>
-                <p>khoirilannm@gmail.com</p>
-            </div>
-            <div class="contact-card">
+            <p>khoirilannm@gmail.com</p>
+            </a>
+            <a href="tel:+6289671917744" target="_blank" class="contact-card">
                 <i class="ri-phone-line"></i>
-                <p>+62-896-7191-7744</p>
-            </div>
-            <div class="contact-card">
-                <i class="ri-map-pin-3-line"></i>
-                <p>Bekasi, Indonesia</p>
-            </div>
+            <p>+62-896-7191-7744</p>
+            </a>
+            <a href="https://www.instagram.com/khoirilannm" target="_blank" class="contact-card">
+                <i class="ri-instagram-line"></i>
+            <p>khoirilannm</p>
+            </a>
+        </div>
+        <div class="credit">
+            <img src="assets/ir-logo.png" alt="">
+            <p>&copy; Muhammad Misbah Khoiril Anam</p>
         </div>
     </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
