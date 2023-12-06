@@ -269,7 +269,6 @@ header nav .toggle i {
     transition: all ease 0.5s;
     height: 20vw;
     width: 20vw;
-    padding: 24px;
     opacity: 0;
     z-index: 1;
 }
@@ -293,7 +292,7 @@ header nav .toggle i {
     --percentage: var(--value);
     --primary: #369;
     --secondary: #adf;
-    --size: 9vw;
+    --size: 15vw;
     animation: progress 2s 0.5s forwards;
     width: var(--size);
     aspect-ratio: 1;
@@ -713,12 +712,27 @@ header nav .toggle i {
         width: 70vw;
      }
 
+     .footer {
+        padding: 100px 20px 10px 20px;
+    }
+
      .footer h1 {
         text-align: center;
+    }
+
+    .contact-card {
+        padding: 10px;
     }
 
      .contact-card p {
         display: none;
      }
+
+     .credit p {
+        font-size: 0.8rem;
+        font-family: Roboto, sans-serif;
+        margin: auto;
+        color: #808080;
+    }
 
 }
