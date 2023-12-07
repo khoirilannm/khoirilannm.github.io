@@ -566,15 +566,7 @@ header nav .toggle i {
 }
 
 .credit {
-    display: flex;
     margin-top: 5vh;
-    flex-direction: row;
-}
-
-.credit img{
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
 }
 
 .credit p {
